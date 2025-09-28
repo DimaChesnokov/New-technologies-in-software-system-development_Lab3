@@ -6,7 +6,7 @@ from .dataset_io import read_two_columns
 from .normalize import read_base
 
 #json аннотация по csv - size,dats,miss,stats
-def annotate_csv(input_csv: Path, out_json: Path) -> None:
+def annotate_csv(input_csv: Path, out_json: Path):
     raw = pd.read_csv(input_csv).iloc[:, :2]
     cleaned = read_base(input_csv)
 
@@ -36,7 +36,7 @@ def annotate_csv(input_csv: Path, out_json: Path) -> None:
 
 
 #Анотация по всем csv в каталоге
-def annotate_dir(dir_path: Path, out_json: Path) -> None:
+def annotate_dir(dir_path: Path, out_json: Path):
 
     files = sorted(Path(dir_path).glob("*.csv"))
     total_rows = 0

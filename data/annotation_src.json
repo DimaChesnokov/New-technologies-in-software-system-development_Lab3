@@ -1,0 +1,13 @@
+{
+  "file": "D:\\GitHub\\New-technologies-in-software-system-development_Lab3\\data\\dataset_KZT.csv",
+  "rows_raw": 2717,
+  "rows_clean": 2717,
+  "date_min": "2010-01-01",
+  "date_max": "2020-12-31",
+  "expected_daily_rows": 4018,
+  "unique_dates": 2717,
+  "missing_dates_est": 1301,
+  "value_min": 0.161098,
+  "value_max": 0.377368,
+  "value_mean": 0.2020145252116305
+}

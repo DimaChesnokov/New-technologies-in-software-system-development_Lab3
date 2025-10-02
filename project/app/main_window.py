@@ -58,7 +58,7 @@ class MainWindow(QtWidgets.QMainWindow):
         h.addWidget(btn_build)
         h.addStretch(1)
 
-        # Block: query by date
+        # Block: query by date визуал
         grp_query = QtWidgets.QGroupBox("Запрос по дате")
         v.addWidget(grp_query)
         ql = QtWidgets.QGridLayout(grp_query)
@@ -89,7 +89,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         v.addStretch(1)
 
-    # === handlers ===
+    #пункт 1. 
     def pick_input_dir(self):
         path = QtWidgets.QFileDialog.getExistingDirectory(self, "Выберите папку с исходным датасетом")
         if not path:
@@ -109,6 +109,7 @@ class MainWindow(QtWidgets.QMainWindow):
         idx = self.cb_csv.currentIndex()
         self.input_csv = None if idx < 0 else Path(self.cb_csv.currentData())
 
+   #Создание аннотации
     def make_src_annotation(self):
         if self.input_csv is None:
             QtWidgets.QMessageBox.warning(self, "Не выбран CSV", "Сначала выберите исходный CSV.")
@@ -148,6 +149,8 @@ class MainWindow(QtWidgets.QMainWindow):
             return
         self.le_query_root.setText(path)
 
+
+  
     def do_query(self):
         mode = self.src_mode.currentText()
         root = self.le_query_root.text().strip()
